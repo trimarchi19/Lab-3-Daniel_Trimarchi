@@ -7,6 +7,7 @@ package lab3;
 
 import java.util.ArrayList;
 import java.util.Scanner;
+import java.util.Random;
 
 /**
  *

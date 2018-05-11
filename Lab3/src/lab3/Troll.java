@@ -6,29 +6,25 @@
 package lab3;
 
 import java.util.Random;
+import static lab3.Bruja.AD;
 
 /**
  *
  * @author X
  */
-public class Eoscuro extends Enemigos {
+public class Troll extends Enemigos{
     static Random r=new Random();
-    static int AD=30+r.nextInt(50);
+    static int AD=5+r.nextInt(10);
     static int AP=0;
-    static int HP=60+r.nextInt(120);
-     static int Eficacia=50+r.nextInt(70);
-    static int Critico=0+r.nextInt(100);
-    static int Velocidad=20;
-    /*
-    HP: 60-120. AD: 30-50 Eficacia: 50-70 Probabilidad de Critico: 0-100 Velocidad: 20
+    static int HP=60+r.nextInt(80);
+     static int Eficacia=10+r.nextInt(30);
+    static int Critico=1;
+    static int Velocidad=3+r.nextInt(7);
 
-
-    */
-    public Eoscuro() {
+    public Troll() {
         super(AD,AP,HP,Eficacia,Critico,Velocidad);
     }
-
-    
+   
     
     
     
