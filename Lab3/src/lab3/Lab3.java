@@ -19,12 +19,13 @@ public class Lab3 {
      */
     public static void main(String[] args) {
         // TODO code application logic here
-        int Ppos=0;//jugador 1-4
-        ArrayList players=new ArrayList<>();
+        int pos=0;//jugador 1-4
+        ArrayList<Integer> stats=new ArrayList<>(); 
+        ArrayList players=new ArrayList<>();       
         Scanner lea=new Scanner(System.in);
         Scanner lea2=new Scanner (System.in);
         int opt=1;
-        String color="",Raza="";
+        String color="",Raza="",estilo="";
         do{
         System.out.print("1)Creacion Del Personaje\n"
                 + "2)Creacion Por Default\n"
@@ -32,6 +33,8 @@ public class Lab3 {
         opt=lea.nextInt();
         switch(opt){
             case 1:
+                Atributos m=new Atributos();
+                estilo="";
                 color="";
                 Raza="";
                 System.out.println("Ingrese El Nombre de su Personaje");
@@ -50,11 +53,36 @@ public class Lab3 {
                     System.out.println("Ingrese la Raza [hobbit/elfo/humano/enano]"); 
                     Raza=lea2.nextLine().toLowerCase();                   
                 }while(!(Raza.equals("hobbit") || Raza.equals("elfo")||Raza.equals("humano")||Raza.equals("enanos")));
-                
+                  
+                 do{
+                    System.out.println("Ingrese El Estilo de Combate: [mago/arquero/berzerk/picaro]"); 
+                    estilo=lea2.nextLine().toLowerCase();                   
+                }while(!( estilo.equals("mago") ||  estilo.equals("arquero")|| estilo.equals("berzerk")|| estilo.equals("picaro"))); 
                 players.add(new Personajes(edad,Nombre,estatura,peso,Raza));
+                if(estilo.equals("mago")){
+                   Mago mag=new Mago(50,20,120,70,2,20,10);
+                      ((Personajes) players.get(pos)).getAtributos().add(mag);
+                }else if(estilo.equals("arquero")){
+                    Arquero arq=new Arquero(50,150,85,60,20,15);
+                     ((Personajes) players.get(pos)).getAtributos().add(arq);
+                }else if(estilo.equals("berzerk")){
+                    Berzerk ber=new Berzerk(80,190,80,30,15,20);
+                       ((Personajes) players.get(pos)).getAtributos().add(ber);
+                }else if(estilo.equals("picaro")){
+                    Picaro pc=new Picaro(55,150,85,60,50,30);
+                       ((Personajes) players.get(pos)).getAtributos().add(pc);
+                }
+               
                 break;
-            default:
+            
+            case 4:
+                for (Object player : players) {
+                    System.out.println(players.indexOf(player)+") "+player);
+                    
+                }
                 break;
+                default:
+                    break;
         }
         }while(opt!=5);
     }
