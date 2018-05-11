@@ -19,8 +19,8 @@ public class Picaro extends Atributos {
         this.AD = AD;
     }
 
-    public Picaro(int AD, int HP, int Eficacia, int Critico, int Suerte, int Velocidad) {
-        super(HP, Eficacia, Critico, Suerte, Velocidad);
+    public Picaro(int AP,int AD, int HP, int Eficacia, int Critico, int Suerte, int Velocidad) {
+        super(AP,AD,HP, Eficacia, Critico, Suerte, Velocidad);
         this.AD = AD;
     }
     

@@ -18,8 +18,10 @@ public class Personajes {
     int peso;
     String raza;
     ArrayList<Objetos> armas=new ArrayList();
-    ArrayList atributos=new ArrayList();
+    ArrayList<Atributos> atributos=new ArrayList();
+      Atributos atri;
     public Personajes() {
+        
         
     }
 
@@ -30,6 +32,15 @@ public class Personajes {
         this.peso = peso;
         this.raza = raza;
     }
+
+    public Atributos getAtri() {
+        return atri;
+    }
+
+    public void setAtri(Atributos atri) {
+        this.atri = atri;
+    }
+    
 
     public String getRaza() {
         return raza;
@@ -98,7 +109,7 @@ public class Personajes {
 
     @Override
     public String toString() {
-        return "Personajes{" + "edad=" + edad + ", Nombre=" + Nombre + ", estatura=" + estatura + ", peso=" + peso + ", raza=" + raza + ",\n armas=" + armas + "\nAtributos"+atributos+'}';
+        return "Personajes{" + "edad=" + edad + ", Nombre=" + Nombre + ", estatura=" + estatura + ", peso=" + peso + ", raza=" + raza + ",\n armas=" + armas + "\nAtributos"+atri+'}';
     }
     
     

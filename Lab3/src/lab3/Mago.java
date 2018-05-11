@@ -11,15 +11,22 @@ package lab3;
  */
 public class Mago extends Atributos {
     int AP;
+    int AD;
 
-    public Mago(int AP,int HP, int Eficacia, int Critico, int Suerte, int Velocidad) {
-        super(HP, Eficacia, Critico, Suerte, Velocidad);
+    public Mago(int AP,int AD,int HP, int Eficacia, int Critico, int Suerte, int Velocidad) {
+        super(AP,AD,HP, Eficacia, Critico, Suerte, Velocidad);
         this.AP=AP;
+        this.AD=AD;
     }
 
     
     public int getAP() {
         return AP;
     }
+
+    public int getAD() {
+        return AD;
+    }
+
     
 }

@@ -10,12 +10,14 @@ package lab3;
  * @author X
  */
 public class Atributos {
-
+    int AD;
+    int AP;
     int HP;
     int Eficacia;
     int Critico;
     int Suerte;
     int Velocidad;
+    
 
     public Atributos() {
     }
@@ -28,6 +30,17 @@ public class Atributos {
         this.Suerte = Suerte;
         this.Velocidad = Velocidad;
     }
+
+    public Atributos(int AP, int AD, int HP, int Eficacia, int Critico, int Suerte, int Velocidad) {
+        this.AD = AD;
+        this.AP = AP;
+        this.HP = HP;
+        this.Eficacia = Eficacia;
+        this.Critico = Critico;
+        this.Suerte = Suerte;
+        this.Velocidad = Velocidad;
+    }
+    
     
 
     public int getHP() {
@@ -72,8 +85,10 @@ public class Atributos {
 
     @Override
     public String toString() {
-        return "Atributos{" + "HP=" + HP +", Eficacia=" + Eficacia + ", Critico=" + Critico + ", Suerte=" + Suerte + ", Velocidad=" + Velocidad + '}';
+        return "Atributos{" + "AD=" + AD + ", AP=" + AP + ", HP=" + HP + ", Eficacia=" + Eficacia + ", Critico=" + Critico + ", Suerte=" + Suerte + ", Velocidad=" + Velocidad + '}';
     }
+
+  
     
 
 }

@@ -60,19 +60,19 @@ public class Lab3 {
                 }while(!( estilo.equals("mago") ||  estilo.equals("arquero")|| estilo.equals("berzerk")|| estilo.equals("picaro"))); 
                 players.add(new Personajes(edad,Nombre,estatura,peso,Raza));
                 if(estilo.equals("mago")){
-                   Mago mag=new Mago(50,20,120,70,2,20,10);
-                      ((Personajes) players.get(pos)).getAtributos().add(mag);
+                 //  Mago mag=new Mago(50,20,120,70,2,20,10);
+                      ((Personajes) players.get(pos)).setAtri(new Mago(50,20,120,70,2,20,10));
                 }else if(estilo.equals("arquero")){
-                    Arquero arq=new Arquero(50,150,85,60,20,15);
-                     ((Personajes) players.get(pos)).getAtributos().add(arq);
+                 //   Arquero arq=new Arquero(50,150,85,60,20,15);
+                    ((Personajes) players.get(pos)).setAtri(new Arquero(0,50,150,85,60,20,15));
                 }else if(estilo.equals("berzerk")){
-                    Berzerk ber=new Berzerk(80,190,80,30,15,20);
-                       ((Personajes) players.get(pos)).getAtributos().add(ber);
+                  //  Berzerk ber=new Berzerk(80,190,80,30,15,20);
+                   ((Personajes) players.get(pos)).setAtri(new Berzerk(0,80,190,80,30,15,20));
                 }else if(estilo.equals("picaro")){
-                    Picaro pc=new Picaro(55,150,85,60,50,30);
-                       ((Personajes) players.get(pos)).getAtributos().add(pc);
+                    //Picaro pc=new Picaro(55,150,85,60,50,30);
+                      ((Personajes) players.get(pos)).setAtri(new Picaro(0,55,150,85,60,50,30));
                 }
-               
+               pos+=1;
                 break;
             
             case 4:
