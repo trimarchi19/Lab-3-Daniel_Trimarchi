@@ -14,13 +14,12 @@ import static lab3.Bruja.AD;
  */
 public class Troll extends Enemigos{
     static Random r=new Random();
-    static int AD=5+r.nextInt(10);
+    static int AD=30+r.nextInt(50);
     static int AP=0;
-    static int HP=60+r.nextInt(80);
-     static int Eficacia=10+r.nextInt(30);
-    static int Critico=1;
-    static int Velocidad=3+r.nextInt(7);
-
+    static int HP=50+r.nextInt(80);
+     static int Eficacia=50+r.nextInt(65);
+    static int Critico=15+r.nextInt(20);
+    static int Velocidad=10;
     public Troll() {
         super(AD,AP,HP,Eficacia,Critico,Velocidad);
     }

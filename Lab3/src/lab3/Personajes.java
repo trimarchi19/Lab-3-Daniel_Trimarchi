@@ -17,7 +17,7 @@ public class Personajes {
     int estatura;
     int peso;
     String raza;
-    ArrayList<Objetos> armas=new ArrayList();
+    ArrayList armas=new ArrayList();
     ArrayList<Atributos> atributos=new ArrayList();
       Atributos atri;
     public Personajes() {
@@ -99,7 +99,7 @@ public class Personajes {
         this.raza = raza;
     }
 
-    public ArrayList<Objetos> getArmas() {
+    public ArrayList getArmas() {
         return armas;
     }
 
